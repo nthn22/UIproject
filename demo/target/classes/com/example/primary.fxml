@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.PrimaryController">
+    <top>
+        <HBox spacing="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Calendar View" onAction="#showCalendar" />
+            <Button text="Add Task" onAction="#showAddTask" />
+            <Button text="Filter ▼" />
+            <Button text="Log Completed Tasks" onAction="#logCompletedTasks" />
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true">
+            <content>
+                <VBox fx:id="taskContainer" spacing="10.0">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

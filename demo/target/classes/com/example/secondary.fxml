@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.SecondaryController" style="-fx-padding: 20;">
+
+    <Button text="← Back" onAction="#goBack" />
+
+    <Label text="Unnamed Task" style="-fx-font-size: 18px;" />
+
+    <HBox spacing="10">
+        <Label text="Description:" />
+        <TextField promptText="Enter description..." />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Date:" />
+        <TextField promptText="MM/DD/YYYY" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Priority:" />
+        <TextField promptText="Low / Medium / High" />
+    </HBox>
+
+    <TextField fx:id="taskField" promptText="Add a task..." />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Submit" onAction="#submitTask" />
+        <Button text="Cancel" onAction="#goBack" />
+    </HBox>
+</VBox>

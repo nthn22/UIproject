@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.CalendarController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="May 2025" style="-fx-font-size: 18px;" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Daily View" />
+        <Button text="Weekly View" />
+        <Button text="Filter ⌄" />
+    </HBox>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <!-- Header Row -->
+        <Label text="Mon (6)" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label text="Tue (7)" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Wed (8)" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Label text="Thu (9)" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <Label text="Fri (10)" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+        <Label text="Sat (11)" GridPane.columnIndex="5" GridPane.rowIndex="0"/>
+        <Label text="Sun (12)" GridPane.columnIndex="6" GridPane.rowIndex="0"/>
+
+        <!-- Example task entries (static) -->
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <Label text="- Task 1" />
+            <Label text="- Task 2" />
+        </VBox>
+
+        <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label text="- Task 1" />
+        </VBox>
+
+        <VBox GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Label text="- Task 1" />
+        </VBox>
+    </GridPane>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Done" />
+        <Button text="Cancel" />
+        <Button text="Add Task" onAction="#goBack" />
+    </HBox>
+</VBox>
